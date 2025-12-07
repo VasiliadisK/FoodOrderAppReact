@@ -4,6 +4,7 @@ import "../styling/modalStyle.css";
 import { useForm, FormProvider } from "react-hook-form";
 import FormTextInput from "./FormTextInput";
 import { StoreOrderToBackend } from "../http/StoreOrderToBackend";
+import toast from "react-hot-toast";
 
 export default function CheckoutModal({ onClose }) {
   const { items, clearCart } = useContext(CartContext);
@@ -36,19 +37,16 @@ export default function CheckoutModal({ onClose }) {
         quantity: cartItem.quantity,
       })),
     };
-
-    // TO-DO 
-    // ADD TOAST NOTIFICATIONS 
-    // CLEAN UP CODE
+    
     try {
       const status = await StoreOrderToBackend(orderData);
       onClose();
       clearCart();
-      } catch (e) {
+      toast.success("Your order was submitted successfully");
+    } catch (e) {
       onClose();
-      setErrors(
-        e.message || "Something went wrong and couldn't store the order"
-      );
+      toast.error("Something went wrong while processing your order, please try again later");
+      clearCart();
     }
   }
 

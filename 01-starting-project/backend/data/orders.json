@@ -1,1 +1,59 @@
-[{"customer":{"email":"kostasvasiliadis123@gmail.com","name":"aasdd Vasileiadis","street":"vasileiadisinc 12","postal-code":"1","city":"t"},"items":[{"id":"m2","name":"Margherita Pizza","price":"12.99","quantity":1},{"id":"m3","name":"Caesar Salad","price":"7.99","quantity":1}],"id":"243.45017838876237"}]
+[
+  {
+    "customer": {
+      "email": "kostasvasiliadis123@gmail.com",
+      "name": "aasdd Vasileiadis",
+      "street": "vasileiadisinc 12",
+      "postal-code": "1",
+      "city": "t"
+    },
+    "items": [
+      {
+        "id": "m2",
+        "name": "Margherita Pizza",
+        "price": "12.99",
+        "quantity": 1
+      },
+      { "id": "m3", "name": "Caesar Salad", "price": "7.99", "quantity": 1 }
+    ],
+    "id": "243.45017838876237"
+  },
+  {
+    "customer": {
+      "email": "kostasvasiliadis123@gmail.com",
+      "name": "astest Vasileiadis",
+      "street": "vasileiadisinc 12",
+      "postal-code": "56122",
+      "city": "Thessaloniki"
+    },
+    "items": [
+      {
+        "id": "m2",
+        "name": "Margherita Pizza",
+        "price": "12.99",
+        "quantity": 1
+      },
+      { "id": "m3", "name": "Caesar Salad", "price": "7.99", "quantity": 1 }
+    ],
+    "id": "537.9280387804534"
+  },
+  {
+    "customer": {
+      "email": "test2@gmail.com",
+      "name": "Konstantinos Vasileiadis",
+      "street": "vasileiadisinc 12",
+      "postal-code": "56122",
+      "city": "Thessaloniki"
+    },
+    "items": [
+      { "id": "m3", "name": "Caesar Salad", "price": "7.99", "quantity": 1 },
+      {
+        "id": "m2",
+        "name": "Margherita Pizza",
+        "price": "12.99",
+        "quantity": 1
+      }
+    ],
+    "id": "229.00886167117008"
+  }
+]

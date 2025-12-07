@@ -1,13 +1,13 @@
 import { CartContext } from "../store/CartContext";
 import { useContext } from "react";
+import toast from "react-hot-toast";
 
 export default function ProductCard({ product }) {
+  const { addItem } = useContext(CartContext);
 
-  const {addItem} = useContext(CartContext);
-
-  function handleAddItem(item)
-  {
-    addItem({item, quantity: 1});
+  function handleAddItem(item) {
+    addItem({ item, quantity: 1 });
+    toast.success("Added item to cart");
   }
   return (
     <li
@@ -45,7 +45,10 @@ export default function ProductCard({ product }) {
           </p>
         )}
 
-        <button onClick={() => handleAddItem(product)} className="btn-press btn-press-yellow w-full mt-auto px-4 py-3 bg-yellow-500 text-stone-900 font-semibold rounded hover:bg-yellow-400 transition-colors duration-200">
+        <button
+          onClick={() => handleAddItem(product)}
+          className="btn-press btn-press-yellow w-full mt-auto px-4 py-3 bg-yellow-500 text-stone-900 font-semibold rounded hover:bg-yellow-400 transition-colors duration-200"
+        >
           Add to cart
         </button>
       </div>
